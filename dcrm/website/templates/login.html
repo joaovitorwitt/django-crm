@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="info">
+            <h1>Welcome back</h1>
+            <p>New here? <a href="{% url 'website:register' %}">click here</a></p>
+        </div>
+
+        <form>
+            <p>Enter your username</p>
+            <input type="text">
+    
+            <p>Enter your password</p>
+            <input type="password">
+    
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+{% endblock %}
