@@ -20,6 +20,16 @@ a {
     text-decoration: none;
 }
 
+
+
+/* general classes */
+
+.container {
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+
 /* navbar styling */
 .navbar {
     background-color: #333;
@@ -50,7 +60,25 @@ a {
 }
 
 /* login styling */
-.container {
-    margin: 0 auto;
-    padding: 0 2%;
+
+
+/* register styling */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.top-info > span {
+    text-transform: uppercase;
+    /* color: #ededee; */
+    font-weight: bold;
+}
+
+.top-info > p > a {
+    color: #0449e9;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
 }

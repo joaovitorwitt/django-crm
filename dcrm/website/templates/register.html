@@ -5,10 +5,32 @@
 <div class="container">
 
     <div class="content-wrapper">
-        <div class="top-info">
-            <span>start for free</span>
-            <h1>Create new account.</h1>
-            <p>Already a member? <a href="{% url 'website:login' %}">Login in</a></p>
+        <div class="content-inner-wrapper">
+            <div class="top-info">
+                <span>start for free</span>
+                <h1>Create new account.</h1>
+                <p>Already a member? <a href="{% url 'website:login' %}">Log in</a></p>
+            </div>
+    
+            <div class="form-wrapper">
+                <form method="post" action="{% url 'website:home' %}">
+                    {% csrf_token %}
+                    <div class="full-name-wrapper">
+                        <input type="text" placeholder="First Name" name="first-name">
+                        <input type="text" placeholder="Last Name" name="last-name">
+                    </div>
+    
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Email" name="email">
+    
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="passwrod" name="confirmation" placeholder="Confirm password">
+        
+                        <input type="submit" value="register">
+                    </div>
+    
+                </form>
+            </div>
         </div>
     </div>
 
