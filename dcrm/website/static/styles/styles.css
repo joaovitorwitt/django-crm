@@ -21,7 +21,6 @@ a {
 }
 
 
-
 /* general classes */
 
 .container {
@@ -60,12 +59,44 @@ a {
 }
 
 /* login styling */
+.content-wrapper-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
 
+.info > p {
+    margin: 1rem 0;
+}
+
+.info > p > a {
+    color: #0449e9;
+}
+
+.info > p > a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #5195ea;
+    background-color: #0449e9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0449e9e0;
+}
 
 /* register styling */
 .content-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .top-info > span {
@@ -74,11 +105,49 @@ a {
     font-weight: bold;
 }
 
+.top-info > h1 {
+    margin: 1rem 0;
+}
+
 .top-info > p > a {
     color: #0449e9;
+}
+
+.top-info > p > a:hover {
+    text-decoration: underline;
+}
+
+.full-name-wrapper {
+   margin: 1rem 0;
+}
+
+.full-name-wrapper > input {
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid #cecece;
+    outline: none;
 }
 
 .input-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.input-wrapper > input {
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid #cecece;
+    outline: none;
+}
+
+.input-wrapper > input[type=submit] {
+    background-color: #0449e9;
+    color: #ededee;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-wrapper > input[type=submit]:hover {
+    background-color: #5195ea;
 }
