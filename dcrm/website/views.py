@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.contrib.auth import autheticate, login, logout
+from django.contrib import messages
+
 
 # Create your views here.
 def home(request):
@@ -6,7 +9,11 @@ def home(request):
 
 
 def login_user(request):
-    return render(request, 'login.html', {})
+    if request.method == "POST":
+        ...
+
+    else:
+        return render(request, 'login.html', {})
 
 
 def register_user(request):
