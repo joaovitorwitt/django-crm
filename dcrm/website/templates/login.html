@@ -10,9 +10,10 @@
                     <p>New here? <a href="{% url 'website:register' %}">Register</a></p>
                 </div>
         
-                <form>
+                <form action="{% url 'website:login' %}" method="post">
+                    {% csrf_token %}
                     <div class="input-wrapper">
-                        <input type="text" name="username" placeholder="username">
+                        <input type="text" name="username" placeholder="username" autocomplete="off">
                     </div>
             
                     <div class="input-wrapper">
