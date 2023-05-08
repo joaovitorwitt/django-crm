@@ -1,7 +1,7 @@
 closeBtn = document.querySelector(".close-button")
-
+message = document.querySelector(".the-message")
 
 closeBtn.addEventListener("click", e => {
-    console.log("testing")
+    message.style.display = "none"
 })
 
