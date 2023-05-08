@@ -1,14 +1,21 @@
 <nav class="navbar">
-
+    <!-- change this -->
     <a href="{% url 'website:home' %}" class="logo">Django CRM</a>
 
     <ul class="link-wrapper">
-        <li class="link-list">
-            <a href="{% url 'website:login' %}">Login</a>
-        </li>
 
-        <li class="link-list">
-            <a href="">Register</a>
-        </li>
+        {% if user.is_authenticated %}
+            <li class="link-list">
+                <a href="{% url 'website:logout' %}">Logout</a>
+            </li>
+        {% else %}
+            <li class="link-list">
+                <a href="{% url 'website:login' %}">Login</a>
+            </li>
+
+            <li class="link-list">
+                <a href="{% url 'website:register' %}">Register</a>
+            </li>
+        {% endif %}
     </ul>
 </nav>

@@ -38,3 +38,9 @@ def register_user(request):
 
     else:
         return render(request, 'register.html', {})
+    
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, "You have been logged out...")
+    return redirect("website:login")
