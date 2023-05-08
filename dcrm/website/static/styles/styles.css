@@ -110,7 +110,6 @@ a {
 
 .top-info > span {
     text-transform: uppercase;
-    /* color: #ededee; */
     font-weight: bold;
 }
 
@@ -126,11 +125,11 @@ a {
     text-decoration: underline;
 }
 
-.full-name-wrapper {
-   margin: 1rem 0;
+.form-inner-wrapper {
+    background-color: #ccc;
 }
 
-.full-name-wrapper > input {
+.first-name, .last-name {
     padding: .5rem 1rem;
     width: 100%;
     border-radius: .5rem;
@@ -138,12 +137,7 @@ a {
     outline: none;
 }
 
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-wrapper > input {
+.email, .username, .password1, .password2 {
     margin-bottom: 1rem;
     width: 100%;
     padding: .5rem 1rem;
@@ -152,13 +146,17 @@ a {
     outline: none;
 }
 
-.input-wrapper > input[type=submit] {
+.submit-button {
     background-color: #0449e9;
     color: #ededee;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
 }
 
-.input-wrapper > input[type=submit]:hover {
+.submit-button:hover {
     background-color: #5195ea;
 }
