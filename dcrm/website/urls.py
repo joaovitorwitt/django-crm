@@ -1,7 +1,6 @@
 # imports views file in the same directory
 from . import views
 from django.urls import path
-from website.views import login_user
 
 app_name = 'website'
 

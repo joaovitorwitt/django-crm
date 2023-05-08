@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border;
+    box-sizing: border-box;
 }
 
 body {
@@ -115,7 +115,7 @@ a {
 }
 
 .top-info > h1 {
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .top-info > p > a {
@@ -132,6 +132,7 @@ a {
 
 .full-name-wrapper > input {
     padding: .5rem 1rem;
+    width: 100%;
     border-radius: .5rem;
     border: 1px solid #cecece;
     outline: none;
@@ -144,6 +145,7 @@ a {
 
 .input-wrapper > input {
     margin-bottom: 1rem;
+    width: 100%;
     padding: .5rem 1rem;
     border-radius: .5rem;
     border: 1px solid #cecece;
