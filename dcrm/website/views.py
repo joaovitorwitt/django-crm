@@ -33,7 +33,7 @@ def login_user(request):
 
 
 
-
+# logout function   
 def logout_user(request):
     logout(request)
     messages.success(request, "You have been logged out...")
