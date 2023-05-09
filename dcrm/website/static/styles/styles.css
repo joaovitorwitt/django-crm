@@ -179,3 +179,8 @@ a {
 .submit-button:hover {
     background-color: #5195ea;
 }
+
+/* django form stuff */
+.errorlist {
+    color: red !important;
+}
