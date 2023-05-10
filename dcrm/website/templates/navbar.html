@@ -8,6 +8,9 @@
             <li class="link-list">
                 <a href="{% url 'website:logout' %}">Logout</a>
             </li>
+            <li class="link-list">
+                <a href="{% url 'website:add' %}">Add Record</a>
+            </li>
         {% else %}
             <li class="link-list">
                 <a href="{% url 'website:login' %}">Login</a>

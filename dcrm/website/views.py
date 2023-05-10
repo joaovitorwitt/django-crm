@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import SignUpForm
+from .forms import SignUpForm, AddRecordForm
 from .models import Record
 
 
@@ -94,3 +94,14 @@ def delete_customer(request, pk):
     else:
         messages.error(request, "You dont have access to this page")
         return redirect("website:login")
+    
+
+def add_record(request):
+    form = AddRecordForm(request.POST or None)
+
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            if form.is_valid():
+                form.save()
+
+        return render(request, "add_record.html", {'form': form})
