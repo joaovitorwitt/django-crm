@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="customer-info">
+        <div class="customer-name">
+            <p>{{ customer_record.first_name }} {{ customer_record.last_name }}</p>
+        </div>
+
+        <ul class="customer-info-wrapper">
+            <li><span class="bold">Address: </span>{{ customer_record.address }}</li>
+            <li><span class="bold">City: </span>{{ customer_record.city }}</li>
+            <li><span class="bold">State: </span>{{ customer_record.state }}</li>
+            <li><span class="bold">Phone: </span>{{ customer_record.zipcode }}</li>
+            <li><span class="bold">Creation Time: </span>{{ customer_record.created_at }}</li>
+            <li><span class="bold">ID: </span>{{ customer_record.id }}</li>
+        </ul>
+    </div>
+
+    <div class="perform-actions">
+        
+    </div>
+</div>
+
+
+{% endblock %}

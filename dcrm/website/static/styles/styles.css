@@ -26,6 +26,20 @@ a {
     margin-bottom: 1rem;
 }
 
+.individual-record {
+    color: blue;
+}
+
+.individual-record:hover {
+    color: #5195ea;
+}
+
+.tate {
+    font-size: .8rem;
+    color: black;
+    margin-bottom: .4rem;
+}
+
 #records {
     border-collapse: collapse;
     width: 100%;
@@ -40,6 +54,32 @@ a {
     text-align: left;
     background-color: #333;
     color: #fefefe;
+}
+
+/* records page */
+.customer-info {
+    border: 1px solid #333;
+    border-radius: 1rem;
+    /* padding: 1rem; */
+}
+
+.customer-name {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 195, 255, 0.623);
+}
+
+.customer-info-wrapper {
+    padding: 0 1rem;
+}
+
+.customer-info-wrapper > li {
+    margin: 1rem 0;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* general classes */

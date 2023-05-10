@@ -5,6 +5,7 @@
 
 <div class="container">
     <h1 class="records-title">Records</h1>
+    <p class="tate">*Click on the ID for settings</p>
 
             <table id="records">
                 <thead>
@@ -25,7 +26,7 @@
                     {% if records %}
                         {% for record in records %}
                             <tr>
-                                <td>{{ record.id }}</td>
+                                <td><a href="{% url 'website:record' record.id %}" class="individual-record">{{ record.id }}</a></td>
                                 <td>{{ record.first_name }} {{ record.last_name }}</td>
                                 <td>{{ record.email }}</td>
                                 <td>{{ record.phone }}</td>
