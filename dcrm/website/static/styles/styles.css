@@ -17,9 +17,30 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
+
+/* home page styling */
+.records-title {
+    margin-bottom: 1rem;
+}
+
+#records {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#records th, #records td {
+    border: 1px solid #333;
+    padding: .4rem;
+}
+
+#records th {
+    text-align: left;
+    background-color: #333;
+    color: #fefefe;
+}
 
 /* general classes */
 
