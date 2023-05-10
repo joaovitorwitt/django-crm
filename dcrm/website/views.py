@@ -81,3 +81,16 @@ def customer_record(request, pk):
     else:
         messages.error(request, "You do not have access to this page")
         return redirect("website:login")
+
+
+def delete_customer(request, pk):
+    if request.user.is_authenticated:
+        delete_record = Record.objects.get(id=pk)
+
+        delete_record.delete()
+        messages.success(request, "Record deleted successfully")
+        return redirect("website:home")
+    
+    else:
+        messages.error(request, "You dont have access to this page")
+        return redirect("website:login")

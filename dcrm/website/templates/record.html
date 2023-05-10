@@ -5,7 +5,7 @@
 <div class="container">
     <div class="customer-info">
         <div class="customer-name">
-            <p>{{ customer_record.first_name }} {{ customer_record.last_name }}</p>
+            <p><strong>{{ customer_record.first_name }} {{ customer_record.last_name }}</strong></p>
         </div>
 
         <ul class="customer-info-wrapper">
@@ -24,11 +24,11 @@
         </div>
 
         <div class="btn-wrapper update">
-            <a>Update Record</a>
+            <a >Update Record</a>
         </div>
 
         <div class="btn-wrapper delete">
-            <a>Delete</button>
+            <a href="{% url 'website:delete' customer_record.id %}">Delete</button>
         </div>
     </div>
 </div>
