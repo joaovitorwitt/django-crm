@@ -82,6 +82,41 @@ a {
     font-weight: bold;
 }
 
+.perform-actions {
+    display: flex;
+    column-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.perform-actions a {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+
+.perform-actions a:hover {
+    background-color: #5196ea0a;
+    color: black;
+}
+
+.back > a {
+    background-color: #a39d9d;
+    color: white;
+    border: 1px solid #1d1c1c;
+}
+
+.update > a {
+    background-color: #1d1c1c;
+    color: #cecece;
+    border: 1px solid #cecece;
+}
+
+.delete > a {
+    background-color: rgba(255, 0, 0, 0.479);
+    color: white;
+    border: 1px solid red;
+}
+
 /* general classes */
 
 .container {
