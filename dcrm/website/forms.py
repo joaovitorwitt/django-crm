@@ -39,14 +39,14 @@ class SignUpForm(UserCreationForm):
 
 
 class AddRecordForm(forms.ModelForm):
-    first_name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'First Name', 'class': 'first-name'}), label="")
-    last_name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Last Name', 'class': 'last-name'}), label="")
-    email = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Email', 'class': 'email'}), label="")
-    phone = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder": "Phone", "class": "phone"}), label="")
-    address = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Address', 'class': 'address'}), label="")
-    city = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'City', 'class': 'city'}), label="")
-    state = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'State', 'class': 'state'}), label="")
-    zipcode = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'State', 'class': 'state'}), label="")
+    first_name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'First Name', 'class': 'first-name', 'autocomplete': 'off'}), label="")
+    last_name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Last Name', 'class': 'last-name', 'autocomplete': 'off'}), label="")
+    email = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Email', 'class': 'email', 'autocomplete': 'off'}), label="")
+    phone = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder": "Phone", "class": "phone", 'autocomplete': 'off'}), label="")
+    address = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Address', 'class': 'address', 'autocomplete': 'off'}), label="")
+    city = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'City', 'class': 'city', 'autocomplete': 'off'}), label="")
+    state = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'State', 'class': 'state', 'autocomplete': 'off'}), label="")
+    zipcode = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={'placeholder': 'Zipcode', 'class': 'zipcode', 'autocomplete': 'off'}), label="")
 
 
     class Meta:

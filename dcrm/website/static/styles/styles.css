@@ -246,13 +246,14 @@ a {
 
 .first-name, .last-name {
     padding: .5rem 1rem;
+    margin-bottom: 1rem;
     width: 100%;
     border-radius: .5rem;
     border: 1px solid #cecece;
     outline: none;
 }
 
-.email, .username, .password1, .password2 {
+.email, .username, .password1, .password2, .phone, .address, .city, .state, .zipcode {
     margin-bottom: 1rem;
     width: 100%;
     padding: .5rem 1rem;
@@ -279,4 +280,40 @@ a {
 /* django form stuff */
 .errorlist {
     color: red !important;
+}
+
+/* add record page */
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.add-record-btn {
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.add-record-btn:hover {
+    background-color: #333333b2;
+}
+
+.back-btn {
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: rgb(167, 19, 19);
+    
+    margin-left: .5rem;
+}
+
+.back-btn:hover {
+    background-color: rgba(167, 19, 19, 0.63);
+}
+
+.back-btn > a {
+    color: white;
 }

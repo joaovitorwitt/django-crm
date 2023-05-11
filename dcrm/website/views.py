@@ -103,5 +103,26 @@ def add_record(request):
         if request.method == "POST":
             if form.is_valid():
                 form.save()
+                messages.success(request, "Record Added")
+                return redirect("website:home")
 
         return render(request, "add_record.html", {'form': form})
+    else:
+        messages.error(request, "You do not have access to this page")
+        return redirect("website:home")
+    
+
+def update_record(request, pk):
+    if request.user.is_authenticated:
+        current_record = Record.objects.get(id=pk)
+        form = AddRecordForm(request.POST or None, instance=current_record)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Record has been updated")
+            return redirect("website:home")
+        
+        return render(request, "update_record.html", {'form': form})
+    
+    else:
+        messages.error(request, "You must be logged in")
+        return redirect("website:home")

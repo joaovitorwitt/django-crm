@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Update record</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button type="submit" class="add-record-btn">Update Record</button>
+                <button class="back-btn"><a href="{% url 'website:home' %}">Back</a></button>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+{% endblock %}

@@ -3,9 +3,17 @@
 {% block body %}
 
 <div class="container">
-    <h1>Add a new record</h1>
+    <div class="form-container">
+        <h1>Add a new record</h1>
 
+        <form class="form" method="post" action="{% url 'website:add' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
     
+            <button type="submit" class="add-record-btn">Add Record</button>
+            <button class="back-btn"><a href="{% url 'website:home' %}">Back</a></button>
+        </form>
+    </div>
 </div>
 
 {% endblock %}
